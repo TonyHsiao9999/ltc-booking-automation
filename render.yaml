@@ -6,4 +6,3 @@ services:
     repo: https://github.com/TonyHsiao9999/ltc-booking-automation
     region: singapore
     buildCommand: ""
-    startCommand: "node playwright-script.js"
