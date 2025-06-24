@@ -2,6 +2,9 @@ const { chromium } = require('playwright');
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
+  const context = await browser.newContext({
+    timezoneId: 'Asia/Taipei'
+  });
   const page = await browser.newPage();
 
   try {
