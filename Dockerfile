@@ -1,7 +1,4 @@
-FROM node:20
-
-# Install dependencies
-RUN apt-get update && apt-get install -y wget gnupg libxshmfence-dev     && npm i -g npm && npm install -g playwright     && playwright install --with-deps chromium
+FROM mcr.microsoft.com/playwright:v1.43.1-jammy
 
 # Set working directory
 WORKDIR /app
@@ -9,5 +6,8 @@ WORKDIR /app
 # Copy files
 COPY . .
 
-# Run script
+# 安裝 npm 套件（但不再另外安裝瀏覽器，因為 image 已附帶）
+RUN npm install
+
+# 預設執行腳本
 CMD ["node", "playwright-script.js"]
