@@ -8,6 +8,7 @@ const { chromium } = require('playwright');
   const page = await browser.newPage();
 
   try {
+    console.log(await page.evaluate(() => new Date().toString()));
     await page.goto('https://www.ntpc.ltc-car.org/', { timeout: 60000 });
 
     // 處理「我知道了」彈窗
