@@ -1,0 +1,12 @@
+{
+  "name": "ltc-booking-automation",
+  "version": "1.0.0",
+  "description": "Auto-booking script for LTC platform using Playwright",
+  "main": "playwright-script.js",
+  "scripts": {
+    "start": "node playwright-script.js"
+  },
+  "dependencies": {
+    "playwright": "^1.43.1"
+  }
+}
